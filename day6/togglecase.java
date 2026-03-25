@@ -1,0 +1,16 @@
+class Main{
+    public static void main(String[] args){
+        String str="Hello World";
+        char[] s=str.toCharArray();
+        for(int i=0;i<str.length();i++){
+            if(s[i]>='a' && s[i]<='z'){
+                s[i]=(char)(s[i]-32);
+            }
+            else if(s[i]>='A' && s[i]<='Z'){
+                s[i]=(char)(s[i]+32);
+            }
+        }
+        System.out.print(new String(s));
+
+    }
+}
