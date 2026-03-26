@@ -1,0 +1,125 @@
+Java String Methods
+1. Basic Information
+length()
+Returns the number of characters in the string.
+isEmpty()
+Returns true if the string has zero length.
+isBlank() (Java 11+)
+Returns true if the string is empty or contains only whitespace.
+
+
+2. Character Access
+charAt(int index)
+Returns the character at the specified index.
+
+
+3. Comparison Methods
+equals(String s)
+Compares two strings for exact content equality.
+equalsIgnoreCase(String s)
+Compares two strings ignoring case differences.
+compareTo(String s)
+Compares strings lexicographically (dictionary order). Returns 0, positive, or negative.
+compareToIgnoreCase(String s)
+Same as compareTo() but ignores case.
+contentEquals(CharSequence cs)
+Compares the string with a CharSequence (e.g., StringBuilder).
+
+
+4. Searching Methods
+contains(CharSequence s)
+Checks if the string contains a specified sequence.
+indexOf(String s)
+Returns the first occurrence index of a substring, or -1 if not found.
+lastIndexOf(String s)
+Returns the last occurrence index of a substring.
+startsWith(String prefix)
+Checks if the string starts with the given prefix.
+endsWith(String suffix)
+Checks if the string ends with the given suffix.
+
+
+5. Substring Methods
+substring(int beginIndex)
+Returns substring from the specified index to the end.
+substring(int beginIndex, int endIndex)
+Returns substring between begin (inclusive) and end (exclusive).
+subSequence(int start, int end)
+Similar to substring() but returns a CharSequence.
+
+
+6. Modification Methods (Immutable Behavior)
+toLowerCase()
+Converts all characters to lowercase.
+toUpperCase()
+Converts all characters to uppercase.
+trim()
+Removes leading and trailing whitespace.
+strip() (Java 11+)
+Improved version of trim() with better Unicode handling.
+stripLeading()
+Removes leading whitespace only.
+stripTrailing()
+Removes trailing whitespace only.
+replace(char old, char new)
+Replaces all occurrences of a character.
+replace(String target, String replacement)
+Replaces all occurrences of a substring.
+replaceAll(String regex, String replacement)
+Replaces matches based on a regular expression.
+replaceFirst(String regex, String replacement)
+Replaces only the first match of a regular expression.
+
+
+7. Splitting and Joining
+split(String regex)
+Splits the string into an array using a delimiter.
+split(String regex, int limit)
+Splits with a limit on the number of resulting parts.
+join(CharSequence delimiter, elements...) (static)
+Joins multiple strings using a delimiter.
+
+
+8. Conversion Methods
+toCharArray()
+Converts the string into a character array.
+getBytes()
+Converts the string into a byte array.
+valueOf() (static)
+Converts different data types (int, double, etc.) into a string.
+
+
+9. Concatenation
+concat(String s)
+Concatenates the given string to the current string.
++ operator
+Commonly used shorthand for string concatenation.
+
+
+10. Pattern Matching
+matches(String regex)
+Checks if the entire string matches a regular expression.
+regionMatches(...)
+Compares specific regions of two strings.
+
+
+11. Advanced Methods
+repeat(int count) (Java 11+)
+Returns a string repeated multiple times.
+lines() (Java 11+)
+Returns a stream of lines from the string.
+indent(int n) (Java 12+)
+Adjusts indentation by adding/removing spaces.
+transform(Function f) (Java 12+)
+Applies a function to the string and returns the result.
+formatted(Object...) (Java 15+)
+Provides formatted string output similar to printf.
+
+
+12. Utility Methods
+intern()
+Stores the string in the string pool for memory optimization.
+format(String, Object...) (static)
+Returns a formatted string.
+copyValueOf(char[]) (static)
+Converts a character array into a string.
