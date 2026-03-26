@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        for(int i=0;i<str.length();i++){
+            boolean flag=false;
+            for(int j=0;j<i;j++){
+                if(str.charAt(i)==str.charAt(j)){
+                    flag=true;
+                    break;
+                }
+            }
+            if(flag)continue;
+            int count=1;
+            for(int k=i+1;k<str.length();k++){
+                if(str.charAt(k)==str.charAt(i)){
+                    count++;
+                }
+            }
+            if(str.charAt(i)==' '){
+                System.out.println("_"+":"+count);
+            }
+            else System.out.println(str.charAt(i)+":"+count);
+        }
+    }
+}
