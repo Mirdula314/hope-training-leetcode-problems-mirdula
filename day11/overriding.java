@@ -2,7 +2,6 @@ class Amazon{
     void delivery(){
         System.out.println("delivery");
     }
-
 }
 class std extends Amazon{
     void delivery(){
